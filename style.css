@@ -1,0 +1,61 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #212121;
+    color: white;
+    transition: 0.5s;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+button {
+    background-color: #b80000;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1.65rem;
+}
+
+button:hover {
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+    background-color: #420000;
+}
+
+.revelacao {
+    font-size: 1.75rem;
+    font-weight: 350;
+    color: black;
+    display: none; /* Começa totalmente escondido */
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 12px;
+    margin: 7.5px;
+
+    /* Estado inicial para a animação */
+    opacity: 0;
+    transform: scale(0.9); /* Começa um pouco menor */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Define a animação */
+}
+
+/* Nova classe que será adicionada via JavaScript */
+.revelacao.visivel {
+    /* Estado final da animação */
+    opacity: 1;
+    transform: scale(1); /* Volta ao tamanho normal */
+}
